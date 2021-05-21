@@ -1,21 +1,23 @@
-# Imagine big manufacture
+# Imagine big manufacture.
 #
-# Employees work there in multiple-days shifts, e.g. Bob works on Monday,
-# Tuesday and Wednesday - it means he has a 3-days shift, starting on Monday.
+# Employees work there in shifts, e.g. Bob works every week on Monday, Tuesday
+# and Wednesday - it means he has a 3-days shift, starting on Monday.
 #
-# Company has planned all shifts for a year and now wants assign employee on
+# Company has planned all shifts for a year and now wants assign employees on
 # theese shifts.
 #
 # We wrote a super smart AI which decides how to distribute employee throughout
-# the shifts, but there is a bug in it. It tries to assign employees to
-# overlapping shifts. For example, it tries to assign Bob to a shift from
-# Monday to Wednesday and to another shift from Tuesday to Thursday. This way
-# Bob would work on two shifts at the same timee on Tuesday and Wednesday.
+# the shifts, but there is a bug in it - it tries to assign employees to
+# overlapping shifts.
+# For example, it tries to assign Bob to a shift from Monday to Wednesday and
+# to another shift from Tuesday to Thursday. This way Bob would work on two
+# overlapping shifts at the same time on Tuesday and Wednesday.
 #
 # Your task is to take results from the AI (huge not sorted array of possible
-# assignments) and choose only assignments which don't overlap. If you find
-# overlapping assignments, take any.
-
+# assignments of different employees) and choose only assignments which don't
+# overlap. If you find overlapping assignments, take any(but just one).
+#
+# This is how Assignment class looks like
 class Assignment
   attr_reader :employee_id
   attr_reader :start_date
@@ -30,4 +32,5 @@ def remove_conflicts(assignments)
 end
 
 # Bonus:
-# If you find overlapping assignments, find the first one in the initial array
+# In case you find overlapping assignments, find the one that was earlier in
+# the input array
