@@ -12,14 +12,15 @@
 # Monday to Wednesday and to another shift from Tuesday to Thursday. This way
 # Bob would work on two shifts at the same timee on Tuesday and Wednesday.
 #
-# Your task is to take results from the AI (huge array of possible assignments)
-# And choose only assignments which don't overlap. If you find overlapping
-# assignments, take any.
+# Your task is to take results from the AI (huge not sorted array of possible
+# assignments) and choose only assignments which don't overlap. If you find
+# overlapping assignments, take any.
 
 class Assignment
   attr_reader :employee_id
   attr_reader :start_date
   attr_reader :end_date
+  # ...
 end
 
 # @param Array<Assignment> input assignments

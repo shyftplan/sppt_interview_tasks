@@ -1,4 +1,5 @@
 # Imagine huge international corporation.
+#
 # It has many sub-companies in different countires.
 # Each country sub-company have many sub-sub-companies in different regions.
 # Each sub-sub-company can have branches (sub-sub-sub-companies) in different
@@ -8,13 +9,13 @@
 # Amount of employees is counted as:
 #   Total = Amount of employees + Amount of employees in its sub-companies
 #
-
-# Representation of the company
+# That's how Company class looks like
 class Company
   attr_reader :id
-  attr_reader :parent_id # Can be nil
-  attr_reader :amount_of_employees # This is amount just in this exact company
+  attr_reader :parent_id # Can be nil for a root company
+  attr_reader :amount_of_employees # Amount in this exact company(without sub-companies)
   attr_reader :minimum_amount_of_employees
+  # ...
 end
 
 # Your task is to check company and all its sub-companies if they have required
